@@ -1,0 +1,49 @@
+{{include:html_header.inc.html}}
+
+<div id="overlay_shadow"></div>
+
+<div id="toolbar" class="_shadow" style="background-color:silver;overflow:hidden;">
+	<table class="layout _wfull"><tr>
+		<td class="_left _middle _nowrap">
+			<a id="cmd_next2" href="javascript://" title="2ページ進む">&#171;</a>
+			<a id="cmd_next" href="javascript://" title="1ページ進む">&#8249;</a>
+			<span id="cmd_page" href="javascript://" title="">999 / 999</span>
+			<a id="cmd_prior" href="javascript://" title="1ページ戻る">&#8250;</a>
+			<a id="cmd_prior2" href="javascript://" title="2ページ戻る">&#187;</a>
+		</td>
+		<td class="_left _middle">
+			<span id="title">{{SITE_NAME}}</span>
+		</td>
+		<td class="_right _middle _nowrap">
+			<a id="cmd_auto" href="javascript://" title="自動ページ送り">&#9654;</a>
+			<a id="cmd_bookmark" href="javascript://" title="ブックマーク" onclick="">&para;</a>
+			<a id="cmd_back" href="javascript://" title="戻る" onclick="javascript:goback();">&crarr;</a>
+		</td>
+	</tr></table>
+</div>
+
+<div id="bookmark">
+	<div id="bookmark_header">
+		<ul id="bookmark_menu">
+			<li><a href="javascript://" onclick="javascript:bookmark_create();">＋新規追加</a></li>
+			<li><a href="javascript://" onclick="javascript:bookmark_clear();">＊すべて消去</a></li>
+			<li><a href="javascript://" onclick="javascript:$('#cmd_bookmark').trigger('click');">×閉じる</a></li>
+		</ul>
+	</div>
+	<div id="bookmark_body">
+		<ul id="bookmark_list">
+		</ul>
+	</div>
+</div>
+
+<table id="viewbox" class="layout _wfull"><tr><td style="text-align:center;vertical-align:middle;">
+	<img class="_shadow" id="viewbox_canvas" src="" />
+</td></tr></table>
+
+<div id="system">
+	<p id="request_ix">{{ix}}</p>
+	<p id="request_pg">{{pg}}</p>
+	<p id="request_re">{{re}}</p>
+</div>
+
+{{include:html_footer.inc.html}}

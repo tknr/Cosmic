@@ -1,0 +1,46 @@
+<?php
+
+mb_internal_encoding('UTF-8');
+
+//
+// カスタマイズ設定項目
+// ファイル名を site.inc.php にリネームしてください
+//
+
+// サイト名
+define('SITE_NAME' ,'Cosmic : Simple Comic Server');
+
+// システムのルートディレクトリ(絶対パス指定、最後のスラッシュは不要)
+define('PATH_ROOT'  ,'/home/cosmic/public_html');
+
+// サイトURLのルート(URL絶対パス指定、最後のスラッシュは不要)
+define('URL_ROOT'  ,'');
+
+// コミックを置いたディレクトリ(絶対パス指定、最後のスラッシュは不要)
+// ＜おすすめ配置方法＞
+// /path/to/comics/て テストコミック 全2巻/テストコミック 第01巻.zip
+// /path/to/comics/て テストコミック 全2巻/テストコミック 第02巻.zip
+// ※必ずサブディレクトリの下にzipを置いて下さい
+define('PATH_COMIC' ,'/path/to/comics');
+
+// サイトのデザインテーマ(themesディレクトリのサブディレクトリ名)
+// サブディレクトリに見つからないファイルは、defaultのものが使用される
+define('SITE_THEME','default');
+
+// パス構成(通常は変更する必要はありません)
+define('PATH_THEMES'  ,PATH_ROOT.'/themes');
+define('PATH_LIB'     ,PATH_ROOT.'/lib');
+define('PATH_FWK'     ,PATH_ROOT.'/lib/fwk');
+define('PATH_INDEX'   ,PATH_ROOT.'/index');
+define('PATH_CACHE'   ,PATH_ROOT.'/cache');  // 書き込み権限が必要(chmod -r 777 cache)
+define('PATH_CACHE_IX',PATH_CACHE.'/index');
+define('PATH_CACHE_CX',PATH_CACHE.'/comic');
+
+// URL構成(通常は変更する必要はありません)
+define('URL_THEMES',URL_ROOT.'/themes');
+
+// システムを設定します
+include_once('version.inc.php');
+include_once('init.inc.php');
+
+?>

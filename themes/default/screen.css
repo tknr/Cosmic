@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+/* 基本部分 --------------------------------------------------------*/
+
+/* HTML基本構造 */
+html {
+}
+
+body {
+	margin:			0px;
+	font-size:		100%;
+	background-color:	#ffffff;
+	color:			#555555;
+	line-height:		1.5em;
+}
+
+table,textarea {
+	font-size:		100%;
+}
+
+/* レイアウト用テーブル */
+table#layout {
+	margin:			0;
+	padding:		0:
+	border:			0;
+	border-collapse:	collapse;
+}
+
+/* システムが使用するエリア(非表示にしておきます) */
+div#system {
+	display:		none;
+}
+
+
+div#system_credit {
+	font-size:		70%;
+}
+div#system_credit,div#system_credit a {
+	color:			silver;
+}
+
+/* 配置関係クラス */
+._left   { text-align: left;   }
+._center { text-align: center; }
+._right  { text-align: right;  }
+._top    { vertical-align: top;    }
+._middle { vertical-align: middle; }
+._bottom { vertical-align: bottom; }
+._wfull  { width: 100%; }
+._nowrap { white-space: nowrap; }
+
+/* ドロップシャドウを付けるクラス(by http://www.so-network.biz/css/css3/) */
+._shadow {
+	box-shadow: 0 0 6px #999;
+	-webkit-box-shadow: 0 0 6px #999;
+	-moz-box-shadow: 0 0 6px #999;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#ccc', Direction=70, Strength=2);/* for IE */
+}
+
+
+/* browse.html -----------------------------------------------------*/
+
+/* 蔵書ブラウザの索引部分 */
+div#indexlist {
+	text-align:		center;
+}
+
+/* 蔵書ブラウザの一覧部分 */
+div#comiclist {
+	text-align:		left;
+	padding:		1em;
+}
+
+/* ブックマークリスト */
+div.bookmark_list {
+	display:		inline;
+}
+
+div.bookmark_list a {
+	margin:			0 0 0 1em;
+}
+
+div.bookmark_list sup {
+	font-size:		50%;
+}
+
+
+/* viewer.html -----------------------------------------------------*/
+
+/* コミックビューアのナビゲーション部分 */
+div#navigator {
+	text-align:		center;
+}
+
+div#backlink {
+	position:		absolute;
+	padding-left:		1em;
+}
+
+/* コミックビューアの表示部分 */
+div#viewbox {
+	clear:			both;
+	text-align:		center;
+}
+
+/* コミックビューアの表示部分画像本体(高さはjQueryによって制御されます) */
+img#viewbox_canvas {
+	border:			1px solid silver;
+	-ms-interpolation-mode:	bicubic;
+}
+
+
+
+
+#toolbar a {
+	text-decoration:	none;
+	font-weight:		bold;
+	font-size:		150%;
+	padding:		0 0.5em 0 0.5em;
+}
+
+#bookmark_menu a {
+	text-decoration:	none;
+}
+
+#toolbar a:link,
+#bookmark_menu a:link {
+	color:			gray;
+}
+
+#toolbar a:visited,
+#bookmark_menu a:visited {
+	color:			gray;
+}
+
+#toolbar a:hover,
+#bookmark_menu a:hover {
+	color:			orange;
+	background-color:	#DDDDDD;
+}
+
+#toolbar span#page:hover {
+	color:			orange;
+	background-color:	#DDDDDD;
+	cursor:			pointer;
+}
+
+#bookmark {
+	border:			1px solid gray;
+	background-color:	white;
+	position:		fixed;
+	top:			-20.5em;
+	left:			10%;
+	height:			20em;
+	width:			80%;
+
+	filter: alpha(opacity=90);
+	-moz-opacity:0.90;
+	opacity:0.90;
+}
+
+ul#bookmark_menu {
+	list-style:		none;
+	margin:			0.5em 0.5em 0 0.5em;
+	padding:		0;
+	background-color:	silver;
+}
+
+ul#bookmark_menu li {
+	display:		inline;
+	margin:			0 0.5em 0 0.5em;
+}
+
+#bookmark_body {
+	margin:			0 0.5em 0.5em 0.5em;
+	padding:		0.5em;
+	height:			16.5em;
+	overflow:		scroll;
+	border:			1px solid silver;
+}
+
